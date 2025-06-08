@@ -1,7 +1,7 @@
 #include <iostream>
-using namespace std;
+#include <thread>
+#include <chrono>
+#include <vector>
+#include <string>
 
-int main() {
-    cout << "Hello, World!" << endl;
-    return 0;
-}
+using namespace std;
