@@ -22,3 +22,23 @@ void print_lirik(){
         {"SO IM NOT MOVING", 0.13},
         {"IM NOT MOOVING", 0.22}
     };
+
+    vector<double> jeda = {0.2, 0.1, 0.4, 0.1, 0.1, 0.4, 0.1, 0.4, 0.1, 0.4, 0.7};
+
+    for (size_t i=0; i<baris.size(); ++i){
+        for (char c : baris[i].first){
+            cout<<c;
+            cout.flush();
+            this_thread::sleep_for(chrono::duration<double>(baris[i].second)); //buat jeda pake detik
+        }
+        cout<<endl;
+        if (i<jeda.size()){
+            this_thread::sleep_for(chrono::duration<double>(jeda[i]));
+        }
+    }
+}
+
+int main(){
+    print_lirik();
+    return 0;
+}
